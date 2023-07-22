@@ -87,7 +87,6 @@ section {
        }
        nav > div > a > span:hover{
         border-bottom: 2px solid black;
-        font-size: larger;
        }
        .nav-heading {
         flex-wrap: nowrap;
@@ -190,6 +189,18 @@ section {
        /* .resume > a AND .github-icon > a: Need to add display inline-block in order to give it width and stuff */
        /* --------------------------------------------------------------------------- */
     
+
+       /* Projects */
+
+       .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+       }
+
+       .project {
+        
+       }
+       /* --------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------- */
 
 
