@@ -1,0 +1,15 @@
+@media only screen and (max-width: 600px) {
+
+
+    nav > .navigation-elements > .nav-heading > span,
+    .navigation-elements > .navbar-accessories > a > span,
+    .navigation-elements > .navbar-tools > a > span
+     {
+        font-size: 0;
+    }
+
+
+
+  }
+
+

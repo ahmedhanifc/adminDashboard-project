@@ -1,3 +1,5 @@
+
+
 *{
     padding:0;
     margin:0;
@@ -8,8 +10,8 @@
 
 .container {
     display: grid;
-    grid-template-rows: 1.3fr 5fr 0.6fr;
-    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 0.6fr 5fr;
+    grid-template-columns: 1fr 5fr ;
 }
 
 .container > * {
@@ -21,7 +23,7 @@
 } */
 
 nav {
-    position: fixed;
+
     grid-row: 1/-1;
     grid-column: 1;
     
@@ -38,7 +40,6 @@ header {
 section {
     grid-row:2;
     grid-column: 2;
-
     display: grid;
     grid-template-rows:1.5fr 1fr;
     grid-template-columns: 2fr 1fr;
@@ -63,42 +64,26 @@ section {
        /* Nav Bar */
 
        nav {
-        padding-left: 12px;
-        padding-right: 10px;
-        margin-top: -50%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        background-color: #10b981;
+        padding-top: 100px;
        }
 
-       .navbar-accessories,
-       .navbar-tools {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: stretch;
-        gap:6px;
-       }
-
-       nav > div > a {
+       .navigation-elements > div > a {
         text-decoration: none;
         color:black;
        }
-       nav > div > a > span:hover{
+       .navigation-elements > div > a > span:hover{
         border-bottom: 2px solid black;
        }
-       .nav-heading {
-        flex-wrap: nowrap;
-        padding-top: 70px;
-        font-size: 1.3rem;
-       }
-       nav > .navbar-accessories> div {
-        font-size: 2rem;
-        width: 100%;
+
+       .navigation-elements {
+        position: fixed;
+        height: 100%;
+        overflow: hidden;
         display: flex;
-        gap:10px;
-        top:30px;
+        flex-direction: column;
+        padding:20px;
+        gap:40px;
        }
 
        .navbar-accessories > a,
@@ -109,7 +94,18 @@ section {
         gap:10px;
        }
 
-       
+       .navigation-elements > *,
+       .navbar-accessories > a >span,
+       .navbar-tools > a >span {
+        font-size: 1rem;
+        color: #ffefff;;
+        font-weight: 800;
+       }
+       .navbar-accessories > *,
+       .navbar-tools > * {
+        padding-top:10px;
+        font-size: 1rem;
+       }
 
        /* --------------------------------------------------------------------------- */
 
@@ -188,53 +184,44 @@ section {
 
        /* .resume > a AND .github-icon > a: Need to add display inline-block in order to give it width and stuff */
        /* --------------------------------------------------------------------------- */
-    
-
        /* Projects */
 
-       .projects {
+       section{
+        background-color: #e2e8f0;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom:40px ;
+       }
+
+       .projects-card {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: repeat(2,1fr); */
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        gap:20px;
+        padding-right: 50px;
        }
 
        .project {
-        
+        border: 1px solid gainsboro;
+        padding:20px;
+        border-radius: 10px;
+        background-color:white ;
+        border-left:10px solid #f59e0b ;
        }
-       /* --------------------------------------------------------------------------- */
-/* ----------------------------------------------------------------------------------- */
+
+       .articles-card,
+       .favourites-card {
+        background-color: white;
+        margin-top: 10px;
+        margin-right:20px ;
+        padding:20px;
+        border-radius: 15px;
+       }
+
+       --------------------------------------------------------------------------- */
 
 
-/* Mobile Layout */
-@media only screen and (max-width: 600px) {
-
-    .container{
-        grid-template-rows: 1fr 4fr;
-        grid-template-columns: 0.3fr 2fr;
-    }
-
-    /* Navbar */
-
-    nav{
-        justify-content: normal;
-        /* margin-top: 1px; */
-        gap:30px;
-    }
-
-    .nav-heading{
-        padding-top: 50px;
-    }
-    .navbar-accessories,
-    .navbar-tools {
-     gap:20px;
-    }
-
-
-    .navbar-accessories > a > span,
-    .navbar-tools > a >span,
-    .nav-heading {
-        font-size: 0;
-    }
-  }
   /* ---------------------------------------------------- */
   /* Header */
   .header-part1{
